@@ -1,0 +1,6 @@
+library(gplots)
+data <- read.table(file=file.choose(),header=TRUE,sep="\t",row.names=1)
+data1 <- as.matrix(data)
+library("pheatmap")
+pheatmap(data1, col=colorRampPalette(c("#073647","white","#A33333"))(256), scale="row",cluster_rows = FALSE,cluster_cols = FALSE,key=TRUE, keysize=1.1,symkey=FALSE, density.info="none", trace="none", cexRow=5)  #cluster_rows = FALSE,cluster_cols = FALSE行列有没有发育树  col=redblue(100)变色梯度 keysize=1.1图例大小 cexRow=0.5竖排文字的大小
+ 

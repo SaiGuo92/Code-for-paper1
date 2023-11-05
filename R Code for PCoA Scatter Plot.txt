@@ -1,0 +1,7 @@
+library(ggplot2)
+protistpcax1x2 <-read.table(file=file.choose(),header=TRUE,sep="\t",row.names=1)
+protistpcax1x2$treatment <- factor(protistpcax1x2$tr,levels = c("CK","C2","C4"))
+
+ggplot(protistpcax1x2, aes(x=axis1, y=axis2)) + 
+  geom_point(aes(colour=factor(protistpcax1x2$treatment)), size=4)+ 
+  theme_bw()+theme(axis.title.x=element_text(size=10),axis.title.y=element_text(size=10),axis.text=element_text(size=10))  

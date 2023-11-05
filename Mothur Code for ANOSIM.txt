@@ -1,0 +1,3 @@
+mothur > sub.sample(shared=A.shared,size=minsize)
+mothur > dist.shared(shared=A.0.03.subsample.shared,calc=braycurtis)
+mothur > anosim(phylip=A.0.03.subsample.braycurtis.0.03.lt.dist, design=A.design)  

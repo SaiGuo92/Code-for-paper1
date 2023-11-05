@@ -1,0 +1,4 @@
+library(vegan) 
+dune=read.table(file=file.choose(),header=TRUE,sep="\t",row.names=1)
+duneenv=read.table(file=file.choose(),header=TRUE,sep="\t",row.names=1)
+adonis(dune ~ treatment, data=duneenv, permutations=999) 

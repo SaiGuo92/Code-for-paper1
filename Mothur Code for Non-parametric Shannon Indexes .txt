@@ -1,0 +1,4 @@
+mothur > sub.sample(shared=A.shared,size=minsize)
+mothur > collect.single(shared=A.0.03.subsample.shared,calc=nseqs-coverage-shannon,freq=100)
+mothur > summary.single(calc=nseqs-coverage-shannon) 
+   

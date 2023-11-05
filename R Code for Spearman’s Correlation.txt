@@ -1,0 +1,8 @@
+library(psych)
+A_B <- read.table(file=file.choose(),head=T, sep="\t",row.names=1)
+occor_Disease_till5 = corr.test(A_B,
+                                use="pairwise",method="spearman",alpha=0.05)
+occor_Disease_till5.r = occor_Disease_till5$r 
+occor_Disease_till5.p = occor_Disease_till5$p 
+write.table(occor_Disease_till5.r, file = "D:/R/occor_Disease_till5.r.csv")
+write.table(occor_Disease_till5.r, file = "D:/R/occor_Disease_till5.p.csv") 

@@ -1,0 +1,6 @@
+library(vegan)
+env<- read.csv("pr.csv",header=TRUE,row.names = 1)
+otu<- read.csv("bacotu.csv",header=TRUE,row.names = 1)
+otu_bray<-vegdist(otu, method='bray',binary=FALSE,diag=FALSE,upper=FALSE,na.rm=FALSE) 
+env_pr<-vegdist(env$pr, method='euclidean',binary=FALSE,diag=FALSE,upper=FALSE,na.rm=FALSE)
+mantel(otu_bray, env_pr,method="spearman", permutations=999) 

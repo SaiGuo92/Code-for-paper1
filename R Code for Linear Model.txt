@@ -1,0 +1,4 @@
+library(relaimpo)
+fun <-read.table(file=file.choose(),header=TRUE,sep="\t",row.names=1)
+fitfun=lm(DI~.,data=fun)
+sfun <- calc.relimp(fitfun,type=c("lmg"), rela=F) 
